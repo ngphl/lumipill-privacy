@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="color-scheme" content="light dark">
+<title>LumiPill Privacy Policy</title>
+<style>
+  :root { --background: #FEFBF8; --text: #262624; --muted: #5E5D58; --accent: #24585C; --rule: #E6E4DE; }
+  @media (prefers-color-scheme: dark) {
+    :root { --background: #161A1A; --text: #ECEAE4; --muted: #B5B2AA; --accent: #8CC4C4; --rule: #2E3434; }
+  }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--background); color: var(--text);
+    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+  main { box-sizing: border-box; max-width: 42rem; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { color: var(--accent); font-size: 1.9rem; line-height: 1.2; margin: 0 0 8px; }
+  h2 { color: var(--accent); font-size: 1.25rem; line-height: 1.3; margin: 36px 0 8px; padding-top: 20px;
+    border-top: 1px solid var(--rule); }
+  p, li { overflow-wrap: anywhere; }
+  .effective { color: var(--muted); margin-top: 0; }
+  ul, ol { padding-left: 1.4rem; }
+  li { margin: 6px 0; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+<h1>LumiPill Privacy Policy</h1>
+<p class="effective">Effective date: 13 October 2026</p>
+<p>LumiPill is a medicine reminder app made by Phi Long Nguyen (&quot;we&quot;). This policy explains what happens to your information when you use it. In short: your medicine list stays on your phone, nothing is shared for advertising or tracking, and medicine photos leave your phone only if you choose to scan them and agree each time.</p>
+<h2>What stays on your phone</h2>
+<p>These are stored on your phone, and in your own iCloud or computer backup if you use one. They are never sent to us:</p>
+<ul>
+  <li>your medicines, doses, times and instructions;</li>
+  <li>what you marked as taken or skipped;</li>
+  <li>copies of the photos you scanned, kept so you can compare a medicine with its original label;</li>
+  <li>scan results you have not saved or discarded yet, with their photos, so you can finish checking them later; they are removed the first time you open Scan after 7 days;</li>
+  <li>your reminders, which the phone schedules itself;</li>
+  <li>your settings, such as the app's language.</li>
+</ul>
+<p>We have no account system and no copy of this information. If you delete a medicine, its saved photos are deleted from the phone. If you delete the app, everything it stored is deleted, except a small access record in the iPhone's secure keychain (the access code below, with no medicine details), which iPhone keeps so the app can scan again if you reinstall it.</p>
+<h2>Scanning a label or prescription (optional)</h2>
+<p>Scanning is optional; you can always type a medicine in instead. When you scan:</p>
+<ol>
+  <li>You take or choose photos. Before anything is sent, the app shows how many photos will be sent and asks you to agree. If you do not agree, nothing leaves your phone.</li>
+  <li>The app makes a smaller copy of each photo with its hidden details (such as location) removed, and sends only that copy over an encrypted connection.</li>
+  <li>Our scanning service, run on Amazon Web Services in Sydney, Australia, reads the photos to find medicine names, doses and times:
+    <ul>
+      <li><strong>Amazon Textract</strong> (Amazon Web Services) reads the printed text. We have opted out of Amazon using this content to improve its services.</li>
+      <li><strong>OpenAI</strong> reads the photos and text to find the schedule details. OpenAI may keep a record of the request for up to 30 days for safety and abuse monitoring, and may process it outside Australia, including in the United States. OpenAI does not use data sent through its API to train its models, and we send it no information about who you are.</li>
+    </ul>
+  </li>
+  <li>The results come back to your phone for you to check. Nothing is added to your schedule until you have checked each medicine and saved it.</li>
+</ol>
+<p>To get your photos to the scanning service, the app first uploads them over an encrypted connection to private, encrypted storage in our Amazon Web Services account in Sydney. Only the scanning service can open them there, and it deletes each photo as soon as it has read it, usually within seconds. If a scan is interrupted before that, the storage deletes the photos automatically within about two days. The service otherwise processes your photos in memory for that one scan. It does not keep the photos or the text read from them, and it keeps no scan history about you.</p>
+<p>A scan can take a minute or two, so the service finishes it even if you switch apps or lose signal, and holds the result (the medicine names, doses and times it found) until your phone collects it. The result is encrypted with a key that only your phone has; our service does not keep that key, so it cannot read the result. It is deleted as soon as your phone has it, and if your phone never collects it, it can no longer be opened after one hour and is then erased automatically, usually within a day or two.</p>
+<p>Scan results can be wrong. Always compare them with the label or prescription before saving.</p>
+<h2>What our service does keep</h2>
+<p>To keep the scanning service working and to stop misuse, it keeps a small amount of technical information that contains no photos or medicine details:</p>
+<ul>
+  <li>a random access code that lets this app use the scanning service (stored on your phone, and on our service only in a scrambled form), and a random number the app creates for this installation, kept with it for up to 90 days; neither is linked to your name or Apple ID;</li>
+  <li>if you joined with an invite, the invite (scrambled) and a count of your scans each month, so each tester stays within their monthly scans; a month's count is erased after about two months;</li>
+  <li>a scrambled form of your connection's internet address and a count of recent scans, used to limit how often scanning can be used, kept for a limited time;</li>
+  <li>for seven days, technical records of each request, such as when it ran, how long it took, how many photos it had and whether it succeeded;</li>
+  <li>for at most an hour, whether a scan is still running, finished or failed, next to its encrypted result (above).</li>
+</ul>
+<p>Our service's database is backed up so it can be restored after a fault; these backups hold the same records (never photos) and are kept for up to 35 days.</p>
+<h2>Testing LumiPill with TestFlight</h2>
+<p>If you test LumiPill through Apple's TestFlight app, Apple runs the test under its own privacy policy and shares with us the name and email address you were invited with (if you were invited by email), crash reports, basic usage information (such as when the app was installed and opened, your device model and system version) and any feedback or screenshots you choose to send. We use these only to run the test and fix problems. They never include your medicines or photos unless you put them in a screenshot or message yourself.</p>
+<p>On the App Store, if you have agreed in your iPhone's settings to share analytics with app developers, Apple may also send us crash reports and usage statistics for LumiPill that do not identify you. We use them only to fix problems.</p>
+<h2>Permissions the app asks for</h2>
+<ul>
+  <li><strong>Camera and photos:</strong> only to take or choose photos you want to scan.</li>
+  <li><strong>Notifications:</strong> to remind you at your medicine times, and, if you leave the app while a scan is running, to tell you when it should be ready (this alert never names a medicine). Both are scheduled on your phone; we do not send them. A reminder shows the medicine's name and dose, and can appear on your lock screen; to hide it there, set Notifications, Show Previews to &quot;When Unlocked&quot; in the iPhone's Settings.</li>
+</ul>
+<h2>What we do not do</h2>
+<ul>
+  <li>We do not sell your information, or share it with anyone except the services above that read your scans.</li>
+  <li>We do not use advertising, tracking, or analytics tools of our own.</li>
+  <li>We do not give medical advice. LumiPill shows the schedule you confirm; it does not tell you what to take.</li>
+</ul>
+<h2>Children</h2>
+<p>LumiPill is not intended for children under 13, and we do not knowingly collect information about them.</p>
+<h2>Your choices</h2>
+<ul>
+  <li>Use the app without scanning by typing medicines in.</li>
+  <li>Decline the photo-sending question at any time; nothing is sent.</li>
+  <li>Turn reminders, camera or photo access off in the iPhone's Settings.</li>
+  <li>Delete a medicine, or the app, to remove what it stored on your phone.</li>
+  <li>Ask us about your information, or to end your scan access, at the email address below. If you joined with an invite, we can end that invite's access. Our service's other records are not linked to your name, so we usually cannot tell which are yours; they are erased on their own as described above.</li>
+</ul>
+<h2>Emails to us</h2>
+<p>If you email us, we use your email address and message only to reply to you, and delete them when they are no longer needed.</p>
+<h2>Changes to this policy</h2>
+<p>If what LumiPill does with your information changes, we will update this page and its effective date before the change takes effect.</p>
+<h2>Contact</h2>
+<p>Questions about this policy: <a href="mailto:hello.lumipill@gmail.com">hello.lumipill@gmail.com</a></p>
+<p>If you are concerned about how we have handled your information, email us first; we will reply as soon as we can, and within 30 days. If you are not satisfied with our answer, you can complain to the Office of the Australian Information Commissioner (oaic.gov.au).</p>
+</main>
+</body>
+</html>
