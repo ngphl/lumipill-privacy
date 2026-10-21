@@ -29,7 +29,7 @@
 <body>
 <main>
 <h1>LumiPill Privacy Policy</h1>
-<p class="effective">Effective date: 13 October 2026</p>
+<p class="effective">Effective date: 21 October 2026</p>
 <p>LumiPill is a medicine reminder app made by Phi Long Nguyen (&quot;we&quot;). This policy explains what happens to your information when you use it. In short: your medicine list stays on your phone, nothing is shared for advertising or tracking, and medicine photos leave your phone only if you choose to scan them and agree each time.</p>
 <h2>What stays on your phone</h2>
 <p>These are stored on your phone, and in your own iCloud or computer backup if you use one. They are never sent to us:</p>
@@ -40,14 +40,16 @@
   <li>photos you add to a medicine yourself (for example of its box or pills), which are never sent anywhere;</li>
   <li>scan results you have not saved or discarded yet, with their photos, so you can finish checking them later; they are removed the first time you open Scan after 7 days;</li>
   <li>your reminders, which the phone schedules itself;</li>
-  <li>your settings, such as the app's language.</li>
+  <li>your settings, such as the app's language;</li>
+  <li>a short log of recent scans (up to 40 entries of times and codes, with no medicine details), used to find faults;</li>
+  <li>the ticket of a scan still being read, so the app can collect its result if it was closed in the meantime.</li>
 </ul>
 <p>We have no account system and no copy of this information. If you delete a medicine, its saved photos are deleted from the phone. If you delete the app, everything it stored is deleted, except a small access record in the iPhone's secure keychain (the access code below, with no medicine details), which iPhone keeps so the app can scan again if you reinstall it.</p>
 <h2>Scanning a label or prescription (optional)</h2>
 <p>Scanning is optional; you can always type a medicine in instead. When you scan:</p>
 <ol>
   <li>You take or choose photos. Before anything is sent, the app shows how many photos will be sent and asks you to agree. If you do not agree, nothing leaves your phone.</li>
-  <li>The app makes a smaller copy of each photo with its hidden details (such as location) removed, and sends only that copy over an encrypted connection.</li>
+  <li>The app makes a copy of each photo, at most 2048 pixels on its longest side, with its hidden details (such as location) removed, and sends only that copy over an encrypted connection.</li>
   <li>Our scanning service, run on Amazon Web Services in Sydney, Australia, reads the photos to find medicine names, doses and times:
     <ul>
       <li><strong>Amazon Textract</strong> (Amazon Web Services) reads the printed text. We have opted out of Amazon using this content to improve its services.</li>
@@ -56,18 +58,21 @@
   </li>
   <li>The results come back to your phone for you to check. Nothing is added to your schedule until you have checked each medicine and saved it.</li>
 </ol>
-<p>To get your photos to the scanning service, the app first uploads them over an encrypted connection to private, encrypted storage in our Amazon Web Services account in Sydney. Only the scanning service can open them there, and it deletes each photo as soon as it has read it, usually within seconds. If a scan is interrupted before that, the storage deletes the photos automatically within about two days. The service otherwise processes your photos in memory for that one scan. It does not keep the photos or the text read from them, and it keeps no scan history about you.</p>
-<p>A scan can take a minute or two, so the service finishes it even if you switch apps or lose signal, and holds the result (the medicine names, doses and times it found) until your phone collects it. The result is encrypted with a key that only your phone has; our service does not keep that key, so it cannot read the result. It is deleted as soon as your phone has it, and if your phone never collects it, it can no longer be opened after one hour and is then erased automatically, usually within a day or two.</p>
+<p>Amazon Web Services and OpenAI process your scans for us under their data processing terms, which protect your information as this policy does.</p>
+<p>To get your photos to the scanning service, the app first uploads them over an encrypted connection to private, encrypted storage in our Amazon Web Services account in Sydney. Only our scanning service reads them there, and it deletes each photo as soon as it has read it, usually within seconds. If a scan is interrupted before that, the storage deletes the photos automatically within about two days. The service otherwise processes your photos in memory for that one scan. It does not keep the photos or the text read from them, and it keeps no scan history about you.</p>
+<p>A scan can take a minute or two, so the service finishes it even if you switch apps or lose signal, and holds the result (the medicine names, doses and times it found) until your phone collects it. The result is encrypted with a key that only your phone has; our service does not keep that key, so it cannot read the result. It is deleted as soon as your phone has it, and if your phone never collects it, it can no longer be opened after one hour and is then erased automatically, usually within a few days.</p>
 <p>Scan results can be wrong. Always compare them with the label or prescription before saving.</p>
 <h2>What our service does keep</h2>
 <p>To keep the scanning service working and to stop misuse, it keeps a small amount of technical information that contains no photos or medicine details:</p>
 <ul>
-  <li>a random access code that lets this app use the scanning service (stored on your phone, and on our service only in a scrambled form), and a random number the app creates for this installation, kept with it for up to 90 days; neither is linked to your name or Apple ID;</li>
-  <li>if you joined with an invite, the invite (scrambled) and a count of your scans each month, so each tester stays within their monthly scans; a month's count is erased after about two months;</li>
-  <li>a scrambled form of your connection's internet address and a count of recent scans, used to limit how often scanning can be used, kept for a limited time;</li>
-  <li>for seven days, technical records of each request, such as when it ran, how long it took, how many photos it had and whether it succeeded;</li>
-  <li>for at most an hour, whether a scan is still running, finished or failed, next to its encrypted result (above).</li>
+  <li>a random access code that lets this app use the scanning service (stored on your phone, and on our service only in a scrambled form), and a random number the app creates for this installation, which includes the time it was created; both are kept for up to 90 days, then erased automatically, usually within a few days, and the number is also kept, as it is, with the invite you joined with, if any; neither is linked to your name or Apple ID;</li>
+  <li>if you joined with an invite, the invite (scrambled) and a count of your scans each month, so each tester stays within their monthly scans; if your phone set scanning up by itself, without an invite, a scrambled form of the installation number with a count of its scans each month, for the same reason; a month's count is erased after about two months;</li>
+  <li>a count of everyone's scans together each day and each month, with nothing about who made them, so the service's total stays within its limits; a day's count is erased after about two days, a month's after about two months;</li>
+  <li>a scrambled form of your connection's internet address and a count of recent scans and of phones setting scanning up, used to limit how often scanning can be used, kept for a limited time;</li>
+  <li>for seven days, then erased automatically, usually within a few days, technical records of each request, such as when it ran, how long it took, how many photos it had and whether it succeeded;</li>
+  <li>whether a scan is still running, finished or failed, next to its encrypted result (above): it can no longer be read after an hour, and is erased automatically, usually within a few days.</li>
 </ul>
+<p>When you open Scan, the app checks with our service that scanning is available, sending this installation's random number; nothing is kept from that check.</p>
 <p>Our service's database is backed up so it can be restored after a fault; these backups hold the same records (never photos) and are kept for up to 35 days.</p>
 <h2>Testing LumiPill with TestFlight</h2>
 <p>If you test LumiPill through Apple's TestFlight app, Apple runs the test under its own privacy policy and shares with us the name and email address you were invited with (if you were invited by email), crash reports, basic usage information (such as when the app was installed and opened, your device model and system version) and any feedback or screenshots you choose to send. We use these only to run the test and fix problems. They never include your medicines or photos unless you put them in a screenshot or message yourself.</p>
@@ -91,7 +96,7 @@
   <li>Decline the photo-sending question at any time; nothing is sent.</li>
   <li>Turn reminders, camera or photo access off in the iPhone's Settings.</li>
   <li>Delete a medicine, or the app, to remove what it stored on your phone.</li>
-  <li>Ask us about your information, or to end your scan access, at the email address below. If you joined with an invite, we can end that invite's access. Our service's other records are not linked to your name, so we usually cannot tell which are yours; they are erased on their own as described above.</li>
+  <li>Ask us about your information, or to delete it, at the email address below. Our service's records are not linked to your name, so we usually cannot tell which are yours; they are erased on their own as described above.</li>
 </ul>
 <h2>Emails to us</h2>
 <p>If you email us, we use your email address and message only to reply to you, and delete them when they are no longer needed.</p>
