@@ -29,10 +29,10 @@
 <body>
 <main>
 <h1>LumiPill Privacy Policy</h1>
-<p class="effective">Effective date: 25 October 2026</p>
+<p class="effective">Effective date: 10 November 2026</p>
 <p>LumiPill is a medicine reminder app made by Phi Long Nguyen (&quot;we&quot;). This policy explains what happens to your information when you use it. In short: your medicine list stays on your phone unless you choose to share it with family; if you turn on the Lock Screen countdown on iOS 17 or 18, the times of your next doses, never their names, go to our service so it can start the card; nothing is shared for advertising or tracking, and medicine photos leave your phone only if you choose to scan them and agree each time.</p>
 <h2>What stays on your phone</h2>
-<p>These are stored on your phone, and in your own iCloud or computer backup if you use one. They are never sent to us, except what you choose to share with family and the countdown's dose times (below):</p>
+<p>These are stored on your phone. They are never sent to us, except what you choose to share with family and the countdown's dose times (below):</p>
 <ul>
   <li>your medicines, doses, times and instructions;</li>
   <li>what you marked as taken or skipped;</li>
@@ -42,9 +42,14 @@
   <li>your reminders, which the phone schedules itself;</li>
   <li>your settings, such as the app's language;</li>
   <li>a short log of recent scans (up to 40 entries of times and codes, with no medicine details), used to find faults;</li>
-  <li>the ticket of a scan still being read, so the app can collect its result if it was closed in the meantime.</li>
+  <li>the ticket of a scan still being read, so the app can collect its result if it was closed in the meantime;</li>
+  <li>photos you chose to send for a scan that had not finished sending, so Scan can offer to send them again if LumiPill was closed; they are offered for one day;</li>
+  <li>if you share or follow in family sharing: your shared list's details, the copy of each followed person's list and ticks, the names of the people you look after or follow, the name you asked family to call you, and the key that locks and opens each shared list's words;</li>
+  <li>if you turn on the Lock Screen countdown: a record of the cards it showed and booked, and of what it last sent our service.</li>
 </ul>
-<p>We have no account system and no copy of this information. If you delete a medicine, its saved photos are deleted from the phone. If you delete the app, everything it stored is deleted, except a small access record in the iPhone's secure keychain (the access code below, with no medicine details), which iPhone keeps so the app can scan again if you reinstall it.</p>
+<p>Your medicine list and what you ticked are not included in iCloud or computer backups, so a phone set up from a backup opens LumiPill without them. The photos LumiPill keeps are included in your iCloud or computer backup, if you use one.</p>
+<p>We have no account system and no copy of this information. If you delete a medicine, its saved photos are deleted from the phone. If you delete the app, everything it stored on your phone is deleted, except a few small records in the iPhone's secure keychain, which iPhone keeps after the app is gone: this installation's random number and access code (below) and when the code runs out; a scrambled form of the invite you joined with, if any; a second copy of the access code, used for family sharing; the numbers of the family lists this phone shares or follows; and, while a scan is being read, the key that opens its result. None of them contain medicine details. If you reinstall LumiPill on the same phone, it uses them to scan again and to end the family lists the deleted app was in.</p>
+<p>Deleting the app does not stop family sharing. If you share your medicines, stop sharing in More, Family before you delete LumiPill. Otherwise your shared list stays on our service, your followers go on seeing it, and they can go on being told that doses were not ticked, until you reinstall LumiPill on the same phone or every follower stops following.</p>
 <h2>Scanning a label or prescription (optional)</h2>
 <p>Scanning is optional; you can always type a medicine in instead. When you scan:</p>
 <ol>
@@ -53,7 +58,7 @@
   <li>Our scanning service, run on Amazon Web Services in Sydney, Australia, reads the photos to find medicine names, doses and times:
     <ul>
       <li><strong>Amazon Textract</strong> (Amazon Web Services) reads the printed text. We have opted out of Amazon using this content to improve its services.</li>
-      <li><strong>OpenAI</strong> reads the photos and text to find the schedule details. OpenAI may keep a record of the request for up to 30 days for safety and abuse monitoring, and may process it outside Australia, including in the United States. OpenAI does not use data sent through its API to train its models, and we send it no information about who you are.</li>
+      <li><strong>OpenAI</strong> reads the photos and text to find the schedule details. OpenAI may keep a record of the request for up to 30 days for safety and abuse monitoring, and may process it outside Australia, including in the United States. OpenAI does not use data sent through its API to train its models, and we send it no information about who you are: only a scrambled code for this installation, so that OpenAI can stop one phone that misuses scanning without stopping everyone's.</li>
     </ul>
   </li>
   <li>The results come back to your phone for you to check. Nothing is added to your schedule until you have checked each medicine and saved it.</li>
@@ -72,7 +77,7 @@
   <li>for seven days, then erased automatically, usually within a few days, technical records of each request, such as when it ran, how long it took, how many photos it had and whether it succeeded;</li>
   <li>whether a scan is still running, finished or failed, next to its encrypted result (above): it can no longer be read after an hour, and is erased automatically, usually within a few days.</li>
 </ul>
-<p>When you open Scan, the app checks with our service that scanning is available, sending this installation's random number; nothing is kept from that check.</p>
+<p>The first time LumiPill needs our service (when you open Scan or More, share with family or follow someone, or turn on the Lock Screen countdown), and again after its access code runs out, the app sets scanning up by sending this installation's random number. The service then keeps the access code and the number for up to 90 days, as described above.</p>
 <p>Our service's database is backed up so it can be restored after a fault; these backups hold the same records (never photos), and those of family sharing and the Lock Screen countdown below, and are kept for up to 35 days.</p>
 <h2>Sharing your medicines with family (optional)</h2>
 <p>Family sharing is optional. If you choose &quot;Share with someone&quot; in More, Family, our service keeps a shared copy of your medicine list in Sydney, Australia, so the people you invite can follow it on their own phones. Before you share, the app shows what they will see, and our service records that you agreed, with the date and the version of the wording you saw.</p>
@@ -88,7 +93,7 @@
 <p>The name a follower calls you is kept readable, so that a message on their phone can say who it is about (&quot;Bà's 08:00 medicines are not ticked yet.&quot;). It is kept while they follow you and is never shown to anyone else.</p>
 <p><strong>Who sees it.</strong> Only the phones you invite, at most five, each with an invite that works one time, within 24 hours. If you tell LumiPill what family should call you, the invite carries that name, so it is filled in on their phone; it goes only in the invite you send, never to our service. You see everyone who follows you and can remove anyone. A follower sees your list and your ticks, and can choose to be told when a dose is taken, skipped or not ticked an hour after its time. A follower can suggest a change to your list; nothing changes on your phone until you add it.</p>
 <p><strong>Messages to followers.</strong> To tell a follower at once, even when LumiPill is closed on their phone, our service sends the message through Expo's push service (Expo, in the United States) and Apple's push notification service, to the follower phone's notification address. A message names you as the follower calls you and gives the time (&quot;Bà took the 08:00 medicines.&quot;); it never contains a medicine's name or dose.</p>
-<p><strong>Stopping.</strong> You can stop sharing at any time. Our service then deletes your shared list, your ticks, the suggestions and the list of followers, usually within about two days, and the followers' phones remove their copy when they next check in. A follower can stop following at any time; their copy is removed from their phone, and the name they call you and their notification address are deleted.</p>
+<p><strong>Stopping.</strong> You can stop sharing at any time. Our service then deletes your shared list, your ticks, the suggestions and the list of followers, usually within about two days, and the followers' phones remove their copy when they next check in. A follower can stop following at any time; their copy is removed from their phone, and the name they call you and their notification address are deleted. A copy of the address is also kept with each message sent to them, so our service can check the message was delivered; it is no longer used after an hour and is then erased automatically, usually within a few days. Deleting LumiPill does not stop sharing (see &quot;What stays on your phone&quot;).</p>
 <p><strong>Why.</strong> To show your family your medicines and ticks, and to tell them when a dose may have been missed, because you asked for it (your consent). You can withdraw your consent at any time by stopping sharing.</p>
 <h2>The Lock Screen countdown (optional)</h2>
 <p>If you turn on &quot;Countdown on the Lock Screen&quot; on an iPhone with iOS 17 or 18, the app sends our service, for your next doses (at most three, within the next day), the time an hour before each dose and the words the card will show, such as &quot;Medicine at 08:00&quot;, &quot;2 medicines&quot; and &quot;Still due&quot;, in the app's language, with where on your phone the card finds its picture. It also sends a code from Apple that lets our service start the card on your phone. It never sends a medicine's name or dose.</p>
@@ -116,7 +121,7 @@
   <li>Decline the photo-sending question at any time; nothing is sent.</li>
   <li>Share with family only if you want to, and stop at any time in More, Family.</li>
   <li>Turn reminders, camera or photo access off in the iPhone's Settings.</li>
-  <li>Delete a medicine, or the app, to remove what it stored on your phone.</li>
+  <li>Delete a medicine, or the app, to remove what it stored on your phone (if you share with family, stop sharing first; see above).</li>
   <li>Ask us about your information, or to delete it, at the email address below. Our service's records are not linked to your name, so we usually cannot tell which are yours; they are erased on their own as described above.</li>
 </ul>
 <h2>Emails to us</h2>
